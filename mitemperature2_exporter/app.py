@@ -1,7 +1,7 @@
 import toml
 import sensor
 import threading
-from flask import Flask
+from flask import Flask, Response
 
 app = Flask(__name__)
 
@@ -12,7 +12,7 @@ def app_config():
 
 @app.route("/metrics")
 def metrics():
-    return render()
+    return Response(render(), mimetype="text/plain")
 
 
 def render():
