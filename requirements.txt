@@ -1,0 +1,4 @@
+black==22.8.0
+flask==2.2.2
+pybluez @ git+https://github.com/pybluez/pybluez.git@HEAD
+toml==0.10.2
