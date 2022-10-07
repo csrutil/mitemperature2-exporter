@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "mitemperature2-exporter"
-version = "0.1.0"
+version = "1.0.0"
 description = ""
 authors = ["csrutil <csrutil@protonmail.com>"]
 readme = "README.md"
@@ -8,7 +8,7 @@ packages = [{include = "mitemperature2_exporter"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pybluez = { git = "https://github.com/pybluez/pybluez.git" }
+pybluez = { git = "ssh+https://github.com/pybluez/pybluez.git" }
 Flask = "^2.2.2"
 toml = "^0.10.2"
 black = "^22.8.0"

@@ -26,7 +26,7 @@ mi_battery_percent{{mac="{mac}", name="{name}"}} {battery_percent}
 mi_rssi{{mac="{mac}", name="{name}"}} {rssi}
 """
 
-    metrics_str = """mitemperature2_exporter{version="1.0.0"} 1"""
+    metrics_str = """mitemperature2_exporter{version="1.0.0"} 1\n"""
     data = sensor.metrics()
 
     for mac in data.keys():
@@ -52,6 +52,6 @@ if __name__ == "__main__":
     host = config["app"]["host"]
     port = config["app"]["port"]
 
-    sensor_monitor = threading.Thread(target=sensor.start, args=())
+    sensor_monitor = threading.Thread(target=sensor.start, args=(debug,))
     sensor_monitor.start()
     app.run(host=host, port=port, debug=debug)

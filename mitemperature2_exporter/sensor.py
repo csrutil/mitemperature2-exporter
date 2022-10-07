@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from collections import deque
 import bluetooth._bluetooth as bluez
 
+from collections import deque
 from bluetooth_utils import (
     toggle_device,
     enable_le_scan,
@@ -11,12 +11,21 @@ from bluetooth_utils import (
     raw_packet_to_str,
 )
 
+from logger import get_logger
+
 MAX_LENTH = 10
 RESULT = dict()
 SOCK = 0
 
+logger = get_logger()
+
 
 def push_metric(mac, temperature, humidity, batteryVoltage, batteryPercent, rssi):
+    logger.info(
+        "mac:{} temperature:{} humidity:{} batteryVoltage:{} batteryPercent:{} rssi:{} ".format(
+            mac, temperature, humidity, batteryVoltage, batteryPercent, rssi
+        )
+    )
 
     if mac not in RESULT:
         RESULT[mac] = deque(maxlen=MAX_LENTH)
@@ -75,7 +84,7 @@ def handler(mac, adv_type, data, rssi):
         push_metric(mac, temperature, humidity, batteryVoltage, batteryPercent, rssi)
 
 
-def start():
+def start(debug=False):
     # https://github.com/JsBergbau/MiTemperature2/blob/master/LYWSD03MMC.py#L614
     dev_id = 0
     toggle_device(dev_id, True)

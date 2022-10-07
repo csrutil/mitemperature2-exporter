@@ -7,6 +7,6 @@ debug = true
 
 # sensor config
 [sensor]
-
-  [sensor.humanize]
-  "A4:C1:38:1F:CD:80" = "Living Room"
+[sensor.humanize]
+"A4:C1:38:1F:CD:80" = "Living Room"
+"A4:C1:38:98:36:7D" = "Cable Box"
