@@ -2,4 +2,4 @@
 
 Prometheus exporter for **Mijia Bluetooth Thermometer**
 
-![Mijia Bluetooth Thermometer](public/sensor.jpg)
+<img src="public/sensor.jpg" alt="Mijia Bluetooth Thermometer" style="width: 20%;">
