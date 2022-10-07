@@ -95,7 +95,7 @@ def start(debug=False):
 
     try:
         # Called on new LE packet
-        parse_le_advertising_events(SOCK, handler=handler, debug=False)
+        parse_le_advertising_events(SOCK, handler=handler, debug=debug)
     # Scan until Ctrl-C
     except KeyboardInterrupt:
         disable_le_scan(SOCK)

@@ -1,13 +1,9 @@
-import toml
 import sensor
 import threading
 from flask import Flask, Response
+from app_config import app_config
 
 app = Flask(__name__)
-
-
-def app_config():
-    return toml.load("config/app.toml")
 
 
 @app.route("/metrics")
