@@ -6,7 +6,7 @@ run:
 	@poetry run python mitemperature2_exporter/app.py
 
 install:
-	@poetry install
+	@poetry install --only main
 
 lint:
 	@poetry run black mitemperature2_exporter

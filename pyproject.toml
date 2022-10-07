@@ -8,13 +8,13 @@ packages = [{include = "mitemperature2_exporter"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-pybluez = { git = "ssh+https://github.com/pybluez/pybluez.git" }
+pybluez = {git = "https://github.com/pybluez/pybluez"}
 Flask = "^2.2.2"
 toml = "^0.10.2"
-black = "^22.8.0"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^5.0.4"
+black = "^22.8.0"
 
 [build-system]
 requires = ["poetry-core"]

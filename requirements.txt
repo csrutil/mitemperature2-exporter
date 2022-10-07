@@ -1,4 +1,4 @@
 black==22.8.0
 flask==2.2.2
-pybluez @ git+https://github.com/pybluez/pybluez.git@HEAD
+pybluez @ git+https://github.com/pybluez/pybluez.git@master
 toml==0.10.2
