@@ -8,5 +8,7 @@ logfile = "/var/log/mitemperature2-exporter.log"
 # sensor config
 [sensor]
 [sensor.humanize]
-"A4:C1:38:1F:CD:80" = "Living Room"
-"A4:C1:38:98:36:7D" = "Cable Box"
+"A4:C1:38:1F:CD:80" = "living room"
+"A4:C1:38:98:36:7D" = "FTTH termination box"
+"A4:C1:38:18:00:45" = "master bedroom"
+"A4:C1:38:EF:01:83" = "kid's room"
